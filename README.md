@@ -6,6 +6,7 @@
   - [Sumario](#sumario)
     - [O que é Terraform](#o-que-é-terraform)
     - [Instalando o Terraform](#instalando-o-terraform)
+  - [Links úteis](#links-úteis)
 
 
 ### O que é Terraform
@@ -24,6 +25,9 @@ $ sudo apt update && sudo apt install terraform
 
 - Para mais sistemas operacionais como CentOS, MAC, use esse link [aqui](https://www.terraform.io/downloads).
 
+## Links úteis
+Para ajudar ainda mais esse guia sobre Terraform no Azure, voiu reforçar com algumas boas práticas de Terraform ideais para cenários de mercado.
 
+- 
 
 
