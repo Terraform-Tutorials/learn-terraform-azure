@@ -6,6 +6,7 @@
   - [Sumario](#sumario)
     - [O que é Terraform](#o-que-é-terraform)
     - [Instalando o Terraform](#instalando-o-terraform)
+    - [Glossário Terraform](#glossário-terraform)
   - [Dose diária de Terraform](#dose-diária-de-terraform)
   - [Terraform: Melhores práticas](#terraform-melhores-práticas)
   - [HashiTalks Brasil](#hashitalks-brasil)
@@ -29,8 +30,11 @@ $ sudo apt update && sudo apt install terraform
 
 - Para mais sistemas operacionais como CentOS, MAC, use esse link [aqui](https://www.terraform.io/downloads).
 
+### Glossário Terraform
+[Esta](https://www.terraform.io/docs/glossary) página reúne breves definições de alguns dos termos técnicos usados na documentação do Terraform, bem como alguns termos que aparecem com frequência em conversas em toda a comunidade Terraform.
+
 ## Dose diária de Terraform
-Existe um belissímo trabalho do [Anton Babenko](https://github.com/antonbabenko) na comunidade e gostaria de divulgar aqui com vocês. Vale demais asistir os vídeos e se inscrever no [canal](https://www.youtube.com/c/AntonBabenkoLive) dele no YouTube
+Existe um belissímo trabalho do [Anton Babenko](https://github.com/antonbabenko) na comunidade e gostaria de divulgar aqui com vocês. Vale demais asistir os vídeos e se inscrever no [canal](https://www.youtube.com/c/AntonBabenkoLive) dele no YouTube. Acompanhe também a página dele no [Twitter](https://twitter.com/weeklytf).
 
 ## Terraform: Melhores práticas
 Para ajudar ainda mais esse guia sobre Terraform no Azure, vou reforçar com algumas boas práticas de Terraform ideais para cenários de mercado. Existe um [guia](https://www.terraform-best-practices.com/v/ptbr/) muito forte dentro da comunidade do Terraform escrito por [Anton Babenko](https://github.com/antonbabenko), e mantido pela comunidade como um todo. Este documento é uma tentativa de descrever sistematicamente as melhores práticas usando o Terraform, e, fornecer recomendações para os problemas mais frequentes de seus usuários.
