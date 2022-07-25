@@ -7,6 +7,7 @@
     - [O que é Terraform](#o-que-é-terraform)
     - [Instalando o Terraform](#instalando-o-terraform)
   - [Links úteis](#links-úteis)
+  - [HashiTalks Brasil](#hashitalks-brasil)
 
 
 ### O que é Terraform
@@ -30,9 +31,15 @@ $ sudo apt update && sudo apt install terraform
 ## Links úteis
 Para ajudar ainda mais esse guia sobre Terraform no Azure, voiu reforçar com algumas boas práticas de Terraform ideais para cenários de mercado.
 
-- [Terraform Best Practices](https://www.terraform-best-practices.com/v/ptbr/)
+1- [Terraform Best Practices](https://www.terraform-best-practices.com/v/ptbr/)
 Este documento é uma tentativa de descrever sistematicamente as melhores práticas usando o Terraform, e, fornecer recomendações para os problemas mais frequentes de seus usuários.
 
-- 
+2- sasas
+
+## HashiTalks Brasil
+Um evento virtual para a comunidade HashiCorp do Brasil em 28 de julho de 2022. Fica ligado demais pessoal!! Acesse [aqui](https://www.youtube.com/watch?v=ITXVEUqlMWk&ab_channel=HashiCorp) o evento.
+
+
+
 
 
