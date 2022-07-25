@@ -12,6 +12,8 @@
 ### O que é Terraform
 Antes de começar precisamos tomar alguma ideia do que é o Terraform e qual é seu propósito dentro de DevOps e dentro do contexto de IaC (Infrastructure as Code). O Terraform é capaz de criar, provisionar, muda e versionar o estado de uma infraestrutura, muito  utilizado no mercado, multi-plataforma, e simples de aprender.
 
+![terraform](images/terra1.png)
+
 ### Instalando o Terraform
 Para que seja possível a utilização, temos que prosseguir com a instalação do Terraform, siga os comandos abaixo.
 
