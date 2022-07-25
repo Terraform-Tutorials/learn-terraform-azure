@@ -30,6 +30,9 @@ $ sudo apt update && sudo apt install terraform
 ## Links úteis
 Para ajudar ainda mais esse guia sobre Terraform no Azure, voiu reforçar com algumas boas práticas de Terraform ideais para cenários de mercado.
 
+- [Terraform Best Practices](https://www.terraform-best-practices.com/v/ptbr/)
+Este documento é uma tentativa de descrever sistematicamente as melhores práticas usando o Terraform, e, fornecer recomendações para os problemas mais frequentes de seus usuários.
+
 - 
 
 
