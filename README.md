@@ -62,7 +62,7 @@ Para facilitar o desenvolvimento com os arquivos HCL do Terraform, uma IDE muito
 ### Estrutura do arquivo `.tf`
 Para que possamos ter uma ideia da linguagem usada pelo Terraform, chamada de HCL, vamos aos exemplos abaixo:
 
-```hcl
+```t
 terraform {
   required_providers {
     aws = {
@@ -83,7 +83,12 @@ resource "aws_instance" "tutorials" {
 ```
 
 ### Os estágios do Terraform
-O Terraform possui um estágio representado por alguns comandos que vou mostrar abaixo. 
+O Terraform possui um estágio representado por alguns comandos que vou mostrar abaixo. Funciona como um workflow.
+
+- `$ terraform init` - inicia o diretório de trabalho do Terraform, é a parte de baixar plugins dos provedores.
+- `$ terraform plan` - estágio de planejamento da infraestrutura, parte que faz o provisionamento.
+- `$ terraform apply` - executa o comando `apply` para que o ambiente seja criado e provisionado.
+- `$ terraform destroy` - comando que faz a destruição dos recursos criados no provedor.
 
 
 
