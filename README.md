@@ -10,6 +10,7 @@
   - [Dose diária de Terraform](#dose-diária-de-terraform)
   - [Terraform: Melhores práticas](#terraform-melhores-práticas)
   - [HashiTalks Brasil](#hashitalks-brasil)
+  - [Visual Studio Code](#visual-studio-code)
 
 
 ### O que é Terraform
@@ -50,6 +51,11 @@ Demonstração do processo de entrega contínua utilizando o Terraform e Azure D
 
 - **CodeBuild, CodePipeline e conteinerizações com Terraform**
 Vou falar um pouco sobre como o Terraform nos auxiliou a criar recursos na AWS de CodeBuild e CodePipeline que fazem parte do nosso processo de entrega e que ajudam a buildar nossas imagens de aplicações em Docker e gerenciá-las com ECR ou algum outro repositório, garantindo a preservação da infraestrutura, facilidade para construção de POCs, segurança no manuseio de chaves e agilidade para criar com complexidade.
+
+
+## Visual Studio Code
+Para facilitar o desenvolvimento com os arquivos HCL do Terraform, uma IDE muito utilizada pelos profissionais é o VSCode. Instale ele clicando [aqui](https://code.visualstudio.com/). Existe também uma extensão muito boa que ajuda demais na identação e na formatação dos arquivos do Terrafor, autocomplete e mais features. Baixei [aqui](https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform).
+
 
 
 
