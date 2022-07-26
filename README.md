@@ -60,7 +60,7 @@ Para facilitar o desenvolvimento com os arquivos HCL do Terraform, uma IDE muito
 
 
 ### Estrutura do arquivo `.tf`
-Para que possamos ter uma ideia da linguagem usada pelo Terraform, chamada de HCL, vamos aos exemplos abaixo:
+Para que possamos ter uma ideia da linguagem usada pelo Terraform, chamada de HCL, vamos aos exemplos abaixo. Linguagem declarativa.
 
 ```t
 terraform {
