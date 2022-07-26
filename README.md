@@ -210,8 +210,6 @@ azurerm_resource_group.teste-group: Creating...
 azurerm_resource_group.teste-group: Creation complete after 4s [id=/subscriptions/4c47f24a-8c45-44b9-a91e-26f16dc9b309/resourceGroups/rgterraform]
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
-amaurybsouza@LAPTOP-J1OHL617:/mnt/c/Users/AmauryBorgesSouza/Documents/github/learn-terraform-azure/terraform-vscode$ terraform destroy
-azurerm_resource_group.teste-group: Refreshing state... [id=/subscriptions/4c47f24a-8c45-44b9-a91e-26f16dc9b309/resourceGroups/rgterraform]
 
 Note: Objects have changed outside of Terraform
 
