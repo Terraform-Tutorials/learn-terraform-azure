@@ -13,6 +13,9 @@
   - [Visual Studio Code](#visual-studio-code)
     - [Estrutura do arquivo `.tf`](#estrutura-do-arquivo-tf)
     - [Os estágios do Terraform](#os-estágios-do-terraform)
+    - [Azure CLI](#azure-cli)
+      - [Instalando o Azure CLI](#instalando-o-azure-cli)
+    - [AzureRM](#azurerm)
 
 
 ### O que é Terraform
@@ -90,5 +93,12 @@ O Terraform possui um estágio representado por alguns comandos que vou mostrar 
 - `$ terraform apply` - executa o comando `apply` para que o ambiente seja criado e provisionado.
 - `$ terraform destroy` - comando que faz a destruição dos recursos criados no provedor.
 
+### Azure CLI
+A principal ferramenta de linha de comando do Azure para gerenciar os diversos serviços.
 
+#### Instalando o Azure CLI
+
+
+### AzureRM
+Um dos providers do Azure para uso dentro da nuvem pública do Azure. Mais detalhes [aqui](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
 
