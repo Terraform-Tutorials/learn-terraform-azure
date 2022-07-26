@@ -97,8 +97,27 @@ O Terraform possui um estágio representado por alguns comandos que vou mostrar 
 A principal ferramenta de linha de comando do Azure para gerenciar os diversos serviços.
 
 #### Instalando o Azure CLI
+A CLI do Azure é uma ferramenta de linha de comando multiplataforma que pode ser instalada localmente em computadores Linux. Você pode usar a CLI do Azure no Linux para se conectar ao Azure e executar comandos administrativos sobre os recursos do Azure. A CLI no Linux permite a execução de vários comandos por meio de um terminal usando prompts de linha de comando interativos ou um script. Vamos fazer a instalação direto no Linux Ubuntu. Para mais opções clique [aqui](https://docs.microsoft.com/pt-br/cli/azure/install-azure-cli).
 
+- Instalar com um comando
+
+`curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
 
 ### AzureRM
 Um dos providers do Azure para uso dentro da nuvem pública do Azure. Mais detalhes [aqui](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
+
+```t
+terraform {
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "3.15.1"
+    }
+  }
+}
+
+provider "azurerm" {
+  # Configuration options
+}
+```
 
