@@ -11,6 +11,8 @@
   - [Terraform: Melhores práticas](#terraform-melhores-práticas)
   - [HashiTalks Brasil](#hashitalks-brasil)
   - [Visual Studio Code](#visual-studio-code)
+    - [Estrutura do arquivo `.tf`](#estrutura-do-arquivo-tf)
+    - [Os estágios do Terraform](#os-estágios-do-terraform)
 
 
 ### O que é Terraform
@@ -57,7 +59,31 @@ Vou falar um pouco sobre como o Terraform nos auxiliou a criar recursos na AWS d
 Para facilitar o desenvolvimento com os arquivos HCL do Terraform, uma IDE muito utilizada pelos profissionais é o VSCode. Instale ele clicando [aqui](https://code.visualstudio.com/). Existe também uma extensão muito boa que ajuda demais na identação e na formatação dos arquivos do Terrafor, autocomplete e mais features. Baixei [aqui](https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform).
 
 
+### Estrutura do arquivo `.tf`
+Para que possamos ter uma ideia da linguagem usada pelo Terraform, chamada de HCL, vamos aos exemplos abaixo:
 
+```hcl
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+  }
+}
+
+provider "aws" {
+  region = var.region
+}
+
+resource "aws_instance" "tutorials" {
+  ami           = var.ami
+  instance_type = var.instance_type
+}
+```
+
+### Os estágios do Terraform
+O Terraform possui um estágio representado por alguns comandos que vou mostrar abaixo. 
 
 
 
