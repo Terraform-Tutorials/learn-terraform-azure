@@ -16,6 +16,7 @@
     - [Azure CLI](#azure-cli)
       - [Instalando o Azure CLI](#instalando-o-azure-cli)
     - [AzureRM](#azurerm)
+    - [Provisionando o primeeiro recurso](#provisionando-o-primeeiro-recurso)
 
 
 ### O que é Terraform
@@ -121,3 +122,108 @@ provider "azurerm" {
 }
 ```
 
+### Provisionando o primeeiro recurso
+Hora de botar a mao na massa e ajustar nosso primeiro recurso na cloud da Azure. Siga as etapas abaixo:
+
+- Primeiramente vamos logar na cloud da Azure via Azure CLI.
+
+`$ az login`
+
+- Executando o comando `terraform init`.
+
+```bash
+$ terraform init
+
+Initializing the backend...
+
+Initializing provider plugins...
+- Finding hashicorp/azurerm versions matching "3.15.1"...
+- Installing hashicorp/azurerm v3.15.1...
+- Installed hashicorp/azurerm v3.15.1 (signed by HashiCorp)
+
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+```
+
+- Agora vamos executar o plan.
+
+```bash
+ terraform plan
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_resource_group.teste-group will be created
+  + resource "azurerm_resource_group" "teste-group" {
+      + id       = (known after apply)
+      + location = "brazilsouth"
+      + name     = "rgterraform"
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
+```
+
+- E por ultimo o comando `terraform apply`.
+
+```bash
+$ terraform apply
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_resource_group.teste-group will be created
+  + resource "azurerm_resource_group" "teste-group" {
+      + id       = (known after apply)
+      + location = "brazilsouth"
+      + name     = "rgterraform"
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+azurerm_resource_group.teste-group: Creating...
+azurerm_resource_group.teste-group: Creation complete after 4s [id=/subscriptions/4c47f24a-8c45-44b9-a91e-26f16dc9b309/resourceGroups/rgterraform]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+amaurybsouza@LAPTOP-J1OHL617:/mnt/c/Users/AmauryBorgesSouza/Documents/github/learn-terraform-azure/terraform-vscode$ terraform destroy
+azurerm_resource_group.teste-group: Refreshing state... [id=/subscriptions/4c47f24a-8c45-44b9-a91e-26f16dc9b309/resourceGroups/rgterraform]
+
+Note: Objects have changed outside of Terraform
+
+Terraform detected the following changes made outside of Terraform since the last "terraform apply":
+
+  # azurerm_resource_group.teste-group has been changed
+  ~ resource "azurerm_resource_group" "teste-group" {
+        id       = "/subscriptions/99a99sjsj777444os000ssss10101sss/resourceGroups/rgterraform"
+        name     = "rgterraform"
+      + tags     = {}
+        # (1 unchanged attribute hidden)
+    }
+
+Unless you have made equivalent changes to your configuration, or ignored the relevant attributes using ignore_changes, the following plan may include actions to undo or respond to these changes.
+```
