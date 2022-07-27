@@ -19,7 +19,7 @@
     - [Provisionando o primeeiro recurso](#provisionando-o-primeeiro-recurso)
   - [Terraform Variáveis](#terraform-variáveis)
   - [Terraform (Funções, expressões e loops)](#terraform-funções-expressões-e-loops)
-  - [Terraform State](#terraform-state)
+  - [Terraform State (Remote state)](#terraform-state-remote-state)
 
 
 ### O que é Terraform
@@ -276,8 +276,13 @@ Hello, Ander!
 There are 4 lights
 ```
 
-## Terraform State
+## Terraform State (Remote state)
+Temos que armazenar o estado sempre em locais remotos para que mais pessoas possam colaborar com o Terraform. No Azure usamos alguns recursos legais que ajuda demais. Veja algumas vantagens de manter o remote state do Terraform.
 
+- colaboração (mantemos esse arquivo seguro)
+- suporte a multiplos backends
+- mantemos o arquivo sempre protegido
 
+No Azure usamos o Azure Storage para manter o state do nosso Terraform.
 
 ![terraform](images/terra2.png)
