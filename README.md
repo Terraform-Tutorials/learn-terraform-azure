@@ -18,6 +18,7 @@
     - [AzureRM](#azurerm)
     - [Provisionando o primeeiro recurso](#provisionando-o-primeeiro-recurso)
   - [Terraform Variáveis](#terraform-variáveis)
+  - [Terraform (Funções, expressões e loops)](#terraform-funções-expressões-e-loops)
 
 
 ### O que é Terraform
@@ -252,3 +253,24 @@ resource "azurerm_resource_group" "grupo-recurso" {
 
 Podemos usar as variáveis em um arquivo separado para que tenhamos mais controle e melhor gerenciamento do que esta sendo tratado.
 
+
+## Terraform (Funções, expressões e loops)
+A linguagem Terraform inclui várias funções internas que você pode chamar de dentro de expressões para transformar e combinar valores. A sintaxe geral para chamadas de função é um nome de função seguido por argumentos separados por vírgulas entre parênteses.
+
+`max(5, 12, 9)`
+
+- Use o comando `$ terraform console` para checar mais detalhes:
+
+```bash
+$ terraform console
+> max(5, 12, 9)
+```
+
+- Mais um exemplo de uso:
+
+```bash
+> format("Hello, %s!", "Ander")
+Hello, Ander!
+> format("There are %d lights", 4)
+There are 4 lights
+```
