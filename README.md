@@ -17,6 +17,7 @@
       - [Instalando o Azure CLI](#instalando-o-azure-cli)
     - [AzureRM](#azurerm)
     - [Provisionando o primeeiro recurso](#provisionando-o-primeeiro-recurso)
+  - [Terraform Variáveis](#terraform-variáveis)
 
 
 ### O que é Terraform
@@ -226,4 +227,25 @@ Terraform detected the following changes made outside of Terraform since the las
     }
 
 Unless you have made equivalent changes to your configuration, or ignored the relevant attributes using ignore_changes, the following plan may include actions to undo or respond to these changes.
+```
+
+## Terraform Variáveis
+Usa-se muito variáveis dentro do Terraform para evitar replicação de código e mais outros pontos negativos durante o desenvolvimento do código, para isso siga as etapas abaixo:
+
+```hcl
+provider "azurerm" {
+  features{}
+}
+
+variable "location" {
+  type = string
+  description = "Localizao dos recursos do Azure."
+  default = "brazilsouth"
+}
+
+resource "azurerm_resource_group" "grupo-recurso" {
+  name = "rg-variaveis"
+  location = var.location
+  
+}
 ```
