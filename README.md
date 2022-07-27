@@ -20,6 +20,7 @@
   - [Terraform Variáveis](#terraform-variáveis)
   - [Terraform (Funções, expressões e loops)](#terraform-funções-expressões-e-loops)
   - [Terraform State (Remote state)](#terraform-state-remote-state)
+    - [Azure Blob Storage](#azure-blob-storage)
 
 
 ### O que é Terraform
@@ -286,3 +287,7 @@ Temos que armazenar o estado sempre em locais remotos para que mais pessoas poss
 No Azure usamos o Azure Storage para manter o state do nosso Terraform.
 
 ![terraform](images/terra2.png)
+
+### Azure Blob Storage
+Usamos de forma muito forte dentro do Azure, esse serviço é super econômico e usado em muitas integrações e sistemas. Para mais detalhes sobre esse serviço, consulte a documentação [aqui](https://azure.microsoft.com/pt-br/services/storage/blobs/#overview).
+
