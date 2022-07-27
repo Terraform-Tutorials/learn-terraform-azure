@@ -69,7 +69,7 @@ Para facilitar o desenvolvimento com os arquivos HCL do Terraform, uma IDE muito
 ### Estrutura do arquivo `.tf`
 Para que possamos ter uma ideia da linguagem usada pelo Terraform, chamada de HCL, vamos aos exemplos abaixo. Linguagem declarativa.
 
-```t
+```hcl
 terraform {
   required_providers {
     aws = {
@@ -110,7 +110,7 @@ A CLI do Azure é uma ferramenta de linha de comando multiplataforma que pode se
 ### AzureRM
 Um dos providers do Azure para uso dentro da nuvem pública do Azure. Mais detalhes [aqui](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
 
-```t
+```hcl
 terraform {
   required_providers {
     azurerm = {
@@ -249,3 +249,6 @@ resource "azurerm_resource_group" "grupo-recurso" {
   
 }
 ```
+
+Podemos usar as variáveis em um arquivo separado para que tenhamos mais controle e melhor gerenciamento do que esta sendo tratado.
+
