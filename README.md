@@ -19,6 +19,7 @@
     - [Provisionando o primeeiro recurso](#provisionando-o-primeeiro-recurso)
   - [Terraform Variáveis](#terraform-variáveis)
   - [Terraform (Funções, expressões e loops)](#terraform-funções-expressões-e-loops)
+  - [Terraform State](#terraform-state)
 
 
 ### O que é Terraform
@@ -274,3 +275,9 @@ Hello, Ander!
 > format("There are %d lights", 4)
 There are 4 lights
 ```
+
+## Terraform State
+
+
+
+![terraform](images/terra2.png)
