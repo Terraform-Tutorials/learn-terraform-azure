@@ -46,6 +46,8 @@ Existe um belissímo trabalho do [Anton Babenko](https://github.com/antonbabenko
 ## Terraform: Melhores práticas
 Para ajudar ainda mais esse guia sobre Terraform no Azure, vou reforçar com algumas boas práticas de Terraform ideais para cenários de mercado. Existe um [guia](https://www.terraform-best-practices.com/v/ptbr/) muito forte dentro da comunidade do Terraform escrito por [Anton Babenko](https://github.com/antonbabenko), e mantido pela comunidade como um todo. Este documento é uma tentativa de descrever sistematicamente as melhores práticas usando o Terraform, e, fornecer recomendações para os problemas mais frequentes de seus usuários.
 
+Existe mais um outro site que fornece MUITAS informações úteis sobre as boas práticas com Terraform. Este documento apresenta diretrizes e recomendações para um desenvolvimento eficaz com o Terraform em vários membros da equipe e fluxos de trabalho. Acesse [aqui](https://cloud.google.com/docs/terraform/best-practices-for-terraform).
+
 ## HashiTalks Brasil
 Um evento virtual para a comunidade HashiCorp do Brasil em 28 de julho de 2022. Fica ligado demais pessoal!! Acesse [aqui](https://www.youtube.com/watch?v=ITXVEUqlMWk&ab_channel=HashiCorp) o evento. Confira abaixo alguns dos temas do evento:
 
