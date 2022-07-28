@@ -21,6 +21,7 @@
   - [Terraform (Funções, expressões e loops)](#terraform-funções-expressões-e-loops)
   - [Terraform State (Remote state)](#terraform-state-remote-state)
     - [Azure Blob Storage](#azure-blob-storage)
+  - [Organização do Código do Terraform](#organização-do-código-do-terraform)
 
 
 ### O que é Terraform
@@ -290,4 +291,30 @@ No Azure usamos o Azure Storage para manter o state do nosso Terraform.
 
 ### Azure Blob Storage
 Usamos de forma muito forte dentro do Azure, esse serviço é super econômico e usado em muitas integrações e sistemas. Para mais detalhes sobre esse serviço, consulte a documentação [aqui](https://azure.microsoft.com/pt-br/services/storage/blobs/#overview).
+
+## Organização do Código do Terraform
+Como estamos trabalhando com código é sempre bom seguir as boas práticas de organização, seja workspaces, ambiente de testes, módulos e mais opções. Focado no Terraform, temos que olhar a infraestrutura como código como um produto, ou seja, criar projetos completos, e que sirvam em outros cases.
+
+Outro ponto legal de mencionar é criar a infraestrutura pensando no ambiente que vai tomar cada projeto, ou seja, ter os seguintes ambientes disponíveis:
+ 
+- Desenvolvimento (usado para testes antes da aplicação final).
+- Staging (usado para validação).
+- Produção (provisionamento final dos recursos a serem aplicados).
+
+Sempre que possível crie dentro desses ambiente difernetes tipos de arquivos para facilitar o entendimento e a utilização com os recursos do Terraform.
+
+- **DEV** 
+  - main.tf
+  - variables.tf
+  - main.tfvars
+
+- **TEST**
+  - main.tf
+  - variables.tf
+  - main.tfvars
+
+- **PROD**
+  - main.tf
+  - variables.tf
+  - main.tfvars
 
