@@ -1,0 +1,5 @@
+az login
+
+az group create --location brazilsouth --name terraformstate
+
+az storage account create --name terraformstateaztreinamento --resource-group terraformstate --location brazilsouth --sku Standard_LRS
