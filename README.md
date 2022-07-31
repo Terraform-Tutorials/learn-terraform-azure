@@ -22,6 +22,7 @@
   - [Terraform State (Remote state)](#terraform-state-remote-state)
     - [Azure Blob Storage](#azure-blob-storage)
   - [Organização do Código do Terraform](#organização-do-código-do-terraform)
+  - [Terraform (Módulos)](#terraform-módulos)
 
 
 ### O que é Terraform
@@ -318,3 +319,13 @@ Sempre que possível crie dentro desses ambiente difernetes tipos de arquivos pa
   - variables.tf
   - main.tfvars
 
+É um dos exemplos de organizar os arquivos do Terraform, mas a melhor forma é a que pretendo esclarecer nos próximos tópicos.
+
+## Terraform (Módulos)
+
+
+```terraform
+module "consul" {
+  source = "app.terraform.io/example-corp/k8s-clustr/azurerm"
+  version = "0.0.2"
+}
