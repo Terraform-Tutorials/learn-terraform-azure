@@ -333,7 +333,20 @@ module "consul" {
 ```
 
 ## Terraform Import
-Recurso muito usado para que seja possivel importar uma infraestrutura pre-existente.
+Recurso muito usado para que seja possivel importar uma infraestrutura pre-existente. Vamos criar um recurso no Azure (Virtual Network) e logo depois importar esse recurso para dentro do Terraform usando o comando `terraform import`.
+
+1- Logo apos criar os recursos no portal do Azure, execute o comando abaixo:
+
+`$ terraform state list`
+
+2- Agora temos que executar outro comando do azure:
+
+`$ az group list`
+
+Esse comando deve fornecer mais detalhes sobre esse recurso que foi criado. Precisamos do ID para enviar junto com o comando do `terraform import`.
+
+3- 
+
 
 ```terraform
 provider "azurerm" {
