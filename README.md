@@ -23,6 +23,7 @@
     - [Azure Blob Storage](#azure-blob-storage)
   - [Organização do Código do Terraform](#organização-do-código-do-terraform)
   - [Terraform (Módulos)](#terraform-módulos)
+  - [Terragrunt](#terragrunt)
 
 
 ### O que é Terraform
@@ -329,3 +330,6 @@ module "consul" {
   source = "app.terraform.io/example-corp/k8s-clustr/azurerm"
   version = "0.0.2"
 }
+
+## Terragrunt
+A ideia dessa ferramenta e ajudar na organizacao
