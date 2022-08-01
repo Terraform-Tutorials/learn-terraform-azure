@@ -23,7 +23,7 @@
     - [Azure Blob Storage](#azure-blob-storage)
   - [Organização do Código do Terraform](#organização-do-código-do-terraform)
   - [Terraform (Módulos)](#terraform-módulos)
-  - [Terragrunt](#terragrunt)
+  - [Terraform Import](#terraform-import)
 
 
 ### O que é Terraform
@@ -330,6 +330,23 @@ module "consul" {
   source = "app.terraform.io/example-corp/k8s-clustr/azurerm"
   version = "0.0.2"
 }
+```
 
-## Terragrunt
-A ideia dessa ferramenta e ajudar na organizacao
+## Terraform Import
+Recurso muito usado para que seja possivel importar uma infraestrutura pre-existente.
+
+```terraform
+provider "azurerm" {
+ features {
+
+ } 
+}
+
+resource "azurerm_resource_group" "rg" { 
+}
+
+resource "azurerm_virtual_network" "vnet" { 
+}
+```
+
+
