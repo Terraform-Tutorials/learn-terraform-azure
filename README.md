@@ -345,8 +345,7 @@ Recurso muito usado para que seja possivel importar uma infraestrutura pre-exist
 
 Esse comando deve fornecer mais detalhes sobre esse recurso que foi criado. Precisamos do ID para enviar junto com o comando do `terraform import`.
 
-3- 
-
+3- Agora temos que executar o comando de import. Primeiro crie o provider.
 
 ```terraform
 provider "azurerm" {
@@ -361,5 +360,18 @@ resource "azurerm_resource_group" "rg" {
 resource "azurerm_virtual_network" "vnet" { 
 }
 ```
+
+- Agora execute o comando:
+
+```bash
+$ terraform import azurerm_resource_group.rg /subscriptions/2ekdkdkd-dsdksd-dsds-883jd-jdjsdjs-8sd8s8-dsdsd99-/rg-terraform-import
+azurerm_resource_group.rg: Import prepared!
+  Prepared azurerm_resource_group for import
+azurerm_resource_group.rg: Refreshing state... [id=/subscriptions/2ekdkdkd-dsdksd-dsds-883jd-jdjsdjs-8sd8s8-dsdsd99-/rg-terraform-import]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
 
 
