@@ -350,7 +350,6 @@ Esse comando deve fornecer mais detalhes sobre esse recurso que foi criado. Prec
 ```terraform
 provider "azurerm" {
  features {
-
  } 
 }
 
@@ -373,5 +372,27 @@ Import successful!
 
 The resources that were imported are shown above. These resources are now in
 your Terraform state and will henceforth be managed by Terraform.
+```
 
+- Hora de importar mais um recurso que e o da VNET:
 
+```bash
+$ terraform import azurerm_virtual_network.vnet /subscriptions/subscriptions/2ekdkdkd-dsdksd-dsds-883jd-jdjsdjs-8sd8s8-dsdsd99-/rg-terraform-import/virtualNetworks/terraform-handson
+azurerm_virtual_network.vnet: Importing from ID "/subscriptions/subscriptions/2ekdkdkd-dsdksd-dsds-883jd-jdjsdjs-8sd8s8-dsdsd99-/rg-terraform-import/providers/Microsoft.Network/virtualNetworks/terraform-handson"...
+azurerm_virtual_network.vnet: Import prepared!
+  Prepared azurerm_virtual_network for import
+azurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/subscriptions/2ekdkdkd-dsdksd-dsds-883jd-jdjsdjs-8sd8s8-dsdsd99-/rg-terraform-import/providers/Microsoft.Network/virtualNetworks/terraform-handson]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+```
+
+- Para que seja comprovado, execute mais esse comando. Veja que ele mostra mais outro recurso importado.
+
+```bash
+$ terraform state list
+azurerm_resource_group.rg
+azurerm_virtual_network.vnet
+```
