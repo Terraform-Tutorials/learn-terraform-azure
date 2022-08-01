@@ -24,6 +24,7 @@
   - [Organização do Código do Terraform](#organização-do-código-do-terraform)
   - [Terraform (Módulos)](#terraform-módulos)
   - [Terraform Import](#terraform-import)
+    - [Alterando os recursos criados](#alterando-os-recursos-criados)
 
 
 ### O que é Terraform
@@ -395,4 +396,33 @@ your Terraform state and will henceforth be managed by Terraform.
 $ terraform state list
 azurerm_resource_group.rg
 azurerm_virtual_network.vnet
+```
+
+### Alterando os recursos criados
+Apos os testes podemos alterar mais recursos
+
+```terraform
+provider "azurerm" {
+ features {
+
+ } 
+}
+
+resource "azurerm_resource_group" "rg" {
+  name = "rg-terraform-import"
+  location = "brazilsouth"
+  tags = {
+    "ambiente" = "treinamento"
+  }
+}
+
+resource "azurerm_virtual_network" "vnet" {
+  name = "vnet-impor"
+  resource_group_name = "rg.terraform-import"
+  location = "brazilsouth"
+  address_space = [ "10.0.0.0/16" , "192.168.0.0/16" ]
+  tags = {
+    "ambiente" = "testes"
+  }
+}
 ```
