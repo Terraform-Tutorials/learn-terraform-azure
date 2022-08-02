@@ -25,6 +25,7 @@
   - [Terraform (Módulos)](#terraform-módulos)
   - [Terraform Import](#terraform-import)
     - [Alterando os recursos criados](#alterando-os-recursos-criados)
+  - [Azure DevOps](#azure-devops)
 
 
 ### O que é Terraform
@@ -426,3 +427,11 @@ resource "azurerm_virtual_network" "vnet" {
   }
 }
 ```
+
+## Azure DevOps
+A plataforma do Azure DevOps integra 5 serviços principais que ajuda demais no gerenciamento do ciclo de vida do software.
+
+- Azure Boards (responsável pelo gerenciamento e planejamento do projeto, com adoção de modelos de processos).
+- Azure Pipelines (aqui podemos adicionar integração contínua, ou seja, no momento de o push dispara a rotina para build da app).
+- Azure Repos (hospedagem de códigos dentro do Azure com Git, podemos criar repositórios públicos e privados).
+- 
