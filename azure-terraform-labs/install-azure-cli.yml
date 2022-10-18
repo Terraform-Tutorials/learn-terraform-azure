@@ -1,10 +1,29 @@
 ---
-- name: Installation of Azure CLI via Ansible
+- name: Installing of Azure CLI via Ansible
   hosts: machine
   gather_facts: false
   become: true
   tasks:
+    - name: Upgrade all packages
+      yum:
+        name: '*'
+        state: latest
+
     - name: teste playbook
       command:
-        mkdir /tmp/amaurys
+        rpm --import https://packages.microsoft.com/keys/microsoft.asc 
+
+    - name: Add the repository
+      shell: |
+        echo -e "[azure-cli]
+        name=Azure CLI
+        baseurl=https://packages.microsoft.com/yumrepos/azure-cli
+        enabled=1
+        gpgcheck=1
+        gpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/azure-cli.repo
+
+    - name: Install Azure CLI
+      yum:
+        name: azure-cli
+        state: latest
 ...
